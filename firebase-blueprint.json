@@ -1,0 +1,42 @@
+{
+  "entities": {
+    "School": {
+      "title": "School",
+      "description": "Maktab ma'lumotlari va reyting ko'rsatkichlari",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "description": "Maktab unikal identifikatori" },
+        "rank": { "type": "number", "description": "Reytingdagi o'rni (1-100)" },
+        "name": { "type": "string", "description": "Maktabning to'liq nomi" },
+        "region": { "type": "string", "description": "Viloyat yoki shahar nomi" },
+        "district": { "type": "string", "description": "Tuman nomi" },
+        "category": { "type": "string", "description": "Maktab toifasi (Prezident, Ixtisoslashtirilgan, IDUM, Umumta'lim)" },
+        "overallScore": { "type": "number", "description": "Umumiy reyting balli (0-100)" },
+        "academicScore": { "type": "number", "description": "Akademik va OTMga kirish ko'rsatkichi (0-100)" },
+        "olympiadScore": { "type": "number", "description": "Fan olimpiadalari ko'rsatkichi (0-100)" },
+        "teacherScore": { "type": "number", "description": "O'qituvchilar salohiyati va toifalari (0-100)" },
+        "activismScore": { "type": "number", "description": "Maktab faollari va yetakchilari faollik bali (0-100)" },
+        "infrastructureScore": { "type": "number", "description": "Infratuzilma va shart-sharoit bali (0-100)" },
+        "studentsCount": { "type": "number", "description": "Jami o'quvchilar soni" },
+        "teachersCount": { "type": "number", "description": "O'qituvchilar soni" },
+        "graduatesCount": { "type": "number", "description": "Oxirgi yilgi bitiruvchilar soni" },
+        "universityAdmissionRate": { "type": "number", "description": "OTMga kirish foizi" },
+        "directorName": { "type": "string", "description": "Maktab direktori F.I.Sh" },
+        "leaderName": { "type": "string", "description": "Yoshlar yetakchisi / faollar yetakchisi F.I.Sh" },
+        "motto": { "type": "string", "description": "Maktab shiori" },
+        "description": { "type": "string", "description": "Maktab haqida batafsil ma'lumot" },
+        "phone": { "type": "string", "description": "Bog'lanish uchun telefon raqami" },
+        "telegram": { "type": "string", "description": "Telegram kanal yoki guruh havolasi" },
+        "address": { "type": "string", "description": "Maktabning to'liq manzili" },
+        "updatedAt": { "type": "string", "description": "Oxirgi yangilangan vaqt" }
+      },
+      "required": ["name", "region", "district", "overallScore", "rank"]
+    }
+  },
+  "firestore": {
+    "/schools/{schoolId}": {
+      "schema": { "$ref": "School" },
+      "description": "Top 100 maktablar kolleksiyasi"
+    }
+  }
+}

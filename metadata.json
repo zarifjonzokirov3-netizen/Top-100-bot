@@ -1,0 +1,6 @@
+{
+  "name": "Maktablar Reytingi — Top 100 Maktab",
+  "description": "O'zbekiston maktab faollari uchun Top 100 maktablar reytingi va admin boshqaruv tizimi.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
